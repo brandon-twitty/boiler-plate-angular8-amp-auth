@@ -1,0 +1,7 @@
+{
+  "name": "newRoutingApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
