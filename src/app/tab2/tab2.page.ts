@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import {Plugins, CameraResultType} from '@capacitor/core';
+const { Camera } = Plugins;
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
@@ -7,6 +8,10 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
-
+  async takePicture() {
+    const image = await Camera.getPhoto({
+      resultType: CameraResultType.Uri
+    });
+    console.log(image);
+  }
 }
